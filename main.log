@@ -1,0 +1,18 @@
+root - INFO - loaded df
+root - INFO -         dur proto service state  spkts  dpkts  ...  ct_flw_http_mthd  ct_src_ltm  ct_srv_dst  is_sm_ips_ports  attack_cat  label
+0  0.000011   udp       -   INT      2      0  ...                 0           1           2                0      Normal      0
+1  0.000008   udp       -   INT      2      0  ...                 0           1           2                0      Normal      0
+2  0.000005   udp       -   INT      2      0  ...                 0           1           3                0      Normal      0
+3  0.000006   udp       -   INT      2      0  ...                 0           2           3                0      Normal      0
+4  0.000010   udp       -   INT      2      0  ...                 0           2           3                0      Normal      0
+
+[5 rows x 44 columns]
+root - INFO - encoded and nomralized df
+root - INFO -             dur  proto  service     state     spkts  dpkts  ...  ct_flw_http_mthd  ct_src_ltm  ct_srv_dst  is_sm_ips_ports  attack_cat  label
+0  1.833334e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.000000    0.016393              0.0    0.666667    0.0
+1  1.333334e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.000000    0.016393              0.0    0.666667    0.0
+2  8.333335e-08    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.000000    0.032787              0.0    0.666667    0.0
+3  1.000000e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.016949    0.032787              0.0    0.666667    0.0
+4  1.666667e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.016949    0.032787              0.0    0.666667    0.0
+
+[5 rows x 44 columns]
