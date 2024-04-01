@@ -1,4 +1,5 @@
 import pandas as pd
+import logging
 
 class DatasetLoader:
     def __init__(self, file_path):
@@ -9,6 +10,8 @@ class DatasetLoader:
         try:
             self.data = pd.read_csv(self.file_path)
             print("Dataset loaded successfully.")
+            logging.info('loaded df')
+            logging.info(self.data.head())
         except Exception as e:
             print(f"Error loading dataset: {e}")
 
