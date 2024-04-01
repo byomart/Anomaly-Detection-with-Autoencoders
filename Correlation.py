@@ -3,15 +3,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-class DataPreprocessor:
+class CorrelationMatrix:
     def __init__(self, df):
         self.df = df
 
     def plot_correlation_heatmap(self):
         sns.heatmap(self.df.corr())
-        plt.title('Matriz de Correlación')
-        plt.savefig(os.path.join('images', 'correlation_heatmap.png'))  # Guardar la imagen
-        plt.close()  # Cerrar la figura para liberar memoria
+        plt.title('Correlation Matrix')
+        plt.savefig(os.path.join('images', 'correlation_heatmap.png')) 
+        plt.close()
 
     def remove_highly_correlated_variables(self, threshold=0.97):
         correlated_vars = []
@@ -33,14 +33,12 @@ class DataPreprocessor:
         plt.figure(figsize=(12, 6))
         plt.subplot(1, 2, 1)
         sns.heatmap(corrmat, vmax=.8, square=True)
-        plt.title('Matriz de Correlación')
-        plt.savefig(os.path.join('images', 'correlation_matrix.png'))  # Guardar la imagen
-        plt.close()  # Cerrar la figura para liberar memoria
+        plt.title('"attack_cat" correlation matrix')
 
-        plt.figure(figsize=(12, 6))
         plt.subplot(1, 2, 2)
         sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 5}, yticklabels=cols.values, xticklabels=cols.values)
-        plt.title('Variables con Mayor Correlación')
+        plt.title('"attack_cat" 10 most correlated')
+        
         plt.tight_layout()
-        plt.savefig(os.path.join('images', 'selected_vars_correlation.png'))  # Guardar la imagen
-        plt.close()  # Cerrar la figura para liberar memoria
+        plt.savefig(os.path.join('images', 'attack_cat_correlation_matrix.png'))
+        plt.close()
