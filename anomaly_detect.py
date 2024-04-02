@@ -20,7 +20,7 @@ class plot_anomaly:
         self.losses_anomalies = losses_anomalies
 
     def plot_losses(self):
-        plt.figure(figsize=(15, 5))
+        plt.figure(figsize=(15, 10))
         y_min = min(min(self.losses_train), min(self.losses_test), min(self.losses_anomalies))
         y_max = max(max(self.losses_train), max(self.losses_test), max(self.losses_anomalies))
 
