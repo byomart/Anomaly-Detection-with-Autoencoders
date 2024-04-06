@@ -1,11 +1,11 @@
-from dataloader import DatasetLoader
-from cat_norm import Cat_Norm
-from correlation import CorrelationMatrix
-from datasplitter import DataSplitter
-from autoencoder import Autoencoder
-from train import Trainer
-from predict import Predictor
-from anomaly_detect import AnomalyDetector, plot_anomaly
+from classes.dataloader import DatasetLoader
+from classes.cat_norm import Cat_Norm
+from classes.correlation import CorrelationMatrix
+from classes.datasplitter import DataSplitter
+from classes.autoencoder import Autoencoder
+from classes.train import Trainer
+from classes.predict import Predictor
+from classes.anomaly_detect import AnomalyDetector, plot_anomaly
 
 
 import pandas as pd
