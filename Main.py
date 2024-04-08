@@ -39,7 +39,7 @@ loader.log_attack_types(df)
 loader.attack_value_count(df)
 
 df = df.drop(columns=['id'])
-'''
+
 # numerical columns categorization and normalization
 cat_norm = Cat_Norm()
 cat_norm.Cat(df)  
@@ -90,4 +90,3 @@ detector = AnomalyDetector(threshold = 500)
 classifications = detector.detect_anomalies(losses_anomalies)
 visualizer = plot_anomaly(losses_train, losses_test, losses_anomalies)
 visualizer.plot_losses()
-'''
