@@ -6,8 +6,6 @@ The UNSW-NB15 dataset offers a unique blend of real modern normal activities and
 
 Our project involves developing anomaly detection algorithms capable of discerning normal network activities from potentially malicious ones. By leveraging machine learning and deep learning techniques, we aim to build robust models capable of accurately identifying and flagging anomalies in network traffic data, thereby enhancing cybersecurity measures.
 
-
-
 ## Index
 
 ### Exploratory Data Analysis (EDA) and Preprocessing
@@ -15,9 +13,8 @@ The initial step involves exploring the dataset to gain insights into its struct
 
 As an illustration, the images below showcase both the distribution of variables using a pie chart and the correlation analysis based on the correlation matrix. These visualizations offer valuable insights into the dataset's composition and inter-variable relationships, aiding in the understanding of its underlying patterns and potential anomalies.
 
-- **Dataset Load**:
 <p align="center">
-  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/e899ee658cc16572d42ff9bea114d2b86c55a0e5/images/attack_pie_chart.png" alt="Texto alternativo">
+  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/e899ee658cc16572d42ff9bea114d2b86c55a0e5/images/attack_pie_chart.png" alt="Texto alternativo" width="200">
 </p>
 
 <p align="center">
