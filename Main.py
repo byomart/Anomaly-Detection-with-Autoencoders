@@ -6,29 +6,29 @@ from classes.autoencoder import Autoencoder
 from classes.train import Trainer
 from classes.predict import Predictor
 from classes.anomaly_detect import AnomalyDetector, plot_anomaly
+from classes.encoder import Encoder
+from classes.decoder import Decoder
 
 
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from tqdm import tqdm
-import numpy as np
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import seaborn as sns
+from tqdm import tqdm
+import numpy as np
+import pandas as pd
 import torch
-# from torch.utils.data import Dataset, DataLoader
-# from torch.utils.data.sampler import SubsetRandomSampler
-# from torch.utils.data import TensorDataset, WeightedRandomSampler
-# import torch.nn as nn
-# import torch.optim as optim
-# import torch.nn.functional as F
 import logging
 import warnings
 import copy
 import os
 
 
-logging.basicConfig(level=logging.INFO, filename='logs/main.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, 
+                    filename='logs/main.log', 
+                    filemode='w', 
+                    format='%(name)s - %(levelname)s - %(message)s')
+
 
 # dataset load
 file_path = "data/UNSW_NB15_training-set.csv" 

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from encoder import Encoder
-from decoder import Decoder
+from classes.encoder import Encoder
+from classes.decoder import Decoder
 
 class Autoencoder(nn.Module):
     def __init__(self, input_size, output_size, hidden_size1, hidden_size2, center_size):
