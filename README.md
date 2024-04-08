@@ -25,9 +25,13 @@ As an illustration, the images below showcase both the distribution of variables
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/2caf3d74640907e09dd5f5f65ffc0fb826e4a432/images/attack_cat_correlation_matrix.png" alt="Texto alternativo">
 </p>
 
+### Autoencoder for Anomaly Detection
 
+An autoencoder is a type of neural network used for unsupervised learning of data representations. It consists of two main parts: the encoder and the decoder. The encoder takes an input and compresses it into a lower-dimensional representation called a latent code. Then, the decoder takes this latent code and tries to reconstruct the original input.
 
+In the context of anomaly detection, the autoencoder is primarily trained on normal or non-anomalous data. Once trained, the autoencoder can be used to reconstruct new samples. If the difference between the original input and the reconstruction is significant, it can be inferred that the sample is an anomaly.
 
+The autoencoder adapts to the normal data characteristics during training and therefore cannot accurately reconstruct anomalies that significantly differ from normal samples. Hence, anomalies tend to have higher reconstruction errors, allowing them to be detected.
 
 
 <p align="center">
