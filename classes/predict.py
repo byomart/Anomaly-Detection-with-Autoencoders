@@ -45,6 +45,6 @@ class Predictor:
         plt.figure(figsize=(15, 5))
         sns.kdeplot(losses_normal, color='b')
         sns.kdeplot(losses_anomalies, color='r')
-        plt.axvline(x = 2.25, color='k', linestyle='--', label='Threshold')
+        plt.axvline(x = 2, color='k', linestyle='--', label='Threshold')
         plt.savefig(os.path.join('images', 'combined_loss_distributions.png'))
         plt.close()
