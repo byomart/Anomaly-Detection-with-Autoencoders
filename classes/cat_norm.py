@@ -12,12 +12,12 @@ class Cat_Norm():
         categorical_cols = df.select_dtypes(include=['object']).columns
         for col in categorical_cols:
             self.df_encoded[col] = self.encoder.fit_transform(df[col])
+            
+        return self.df_encoded
         
     def Norm(self,df):
-        numeric_cols = df.select_dtypes(include=['int64', 'float64'])
-        for col in numeric_cols:
-            self.df_encoded[col] = self.scaler.fit_transform(df[col].values.reshape(-1, 1))
-            
+        cols_to_normalize = df.columns.difference(['attack_cat'])
+        self.df_encoded[cols_to_normalize] = df[cols_to_normalize].apply(lambda x: (x - x.min()) / (x.max() - x.min()))
         logging.info('encoded and normalized df')
         logging.info(self.df_encoded.head())
 

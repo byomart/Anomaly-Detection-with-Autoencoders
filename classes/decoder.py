@@ -8,8 +8,8 @@ class Decoder(nn.Module):
         self.bn1 = nn.BatchNorm1d(hidden_size2)
         self.l2 = nn.Linear(hidden_size2, hidden_size1)
         self.bn2 = nn.BatchNorm1d(hidden_size1)
-        self.acti = nn.Tanh()
         self.l3 = nn.Linear(hidden_size1, output_size)
+        self.acti = nn.Tanh()
 
     def forward(self, x):
         out = self.l1(x)

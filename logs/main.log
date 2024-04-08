@@ -33,3 +33,44 @@ Name: attack_cat, dtype: int64
 root - INFO - Types of attacks detected among non-anomalies:
 root - INFO - Normal    37000
 Name: attack_cat, dtype: int64
+root - INFO - encoded and normalized df
+root - INFO -             dur  proto  service     state     spkts  dpkts  ...  ct_flw_http_mthd  ct_src_ltm  ct_srv_dst  is_sm_ips_ports  attack_cat  label
+0  1.833334e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.000000    0.016393              0.0           6    0.0
+1  1.333334e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.000000    0.016393              0.0           6    0.0
+2  8.333335e-08    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.000000    0.032787              0.0           6    0.0
+3  1.000000e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.016949    0.032787              0.0           6    0.0
+4  1.666667e-07    0.9      0.0  0.666667  0.000094    0.0  ...               0.0    0.016949    0.032787              0.0           6    0.0
+
+[5 rows x 44 columns]
+root - INFO - Trainset: torch.Size([25900, 44])
+root - INFO - Testset: torch.Size([11100, 44])
+root - INFO - Epoch 1: train_loss: 30.79975216	 val_loss: 18.15367156
+root - INFO - Epoch 2: train_loss: 18.91680052	 val_loss: 16.69332592
+root - INFO - Epoch 3: train_loss: 16.85933122	 val_loss: 15.45107285
+root - INFO - Epoch 4: train_loss: 16.10158574	 val_loss: 14.49319101
+root - INFO - Epoch 5: train_loss: 15.79347858	 val_loss: 14.44921018
+root - INFO - Epoch 6: train_loss: 15.55975980	 val_loss: 14.30806603
+root - INFO - Epoch 7: train_loss: 15.27299204	 val_loss: 13.12273339
+root - INFO - Epoch 8: train_loss: 15.06490949	 val_loss: 13.42208356
+root - INFO - Epoch 9: train_loss: 14.79786255	 val_loss: 13.36153759
+root - INFO - Epoch 10: train_loss: 14.22975236	 val_loss: 13.38103570
+root - INFO - Epoch 11: train_loss: 13.99563639	 val_loss: 13.02175878
+root - INFO - Epoch 12: train_loss: 13.92067093	 val_loss: 13.04724152
+root - INFO - Epoch 13: train_loss: 13.87890383	 val_loss: 12.87864287
+root - INFO - Epoch 14: train_loss: 13.84913246	 val_loss: 12.94672333
+root - INFO - Epoch 15: train_loss: 13.80887743	 val_loss: 13.35396149
+root - INFO - Epoch 16: train_loss: 13.78677786	 val_loss: 12.80017831
+root - INFO - Epoch 17: train_loss: 13.76887354	 val_loss: 12.79881084
+root - INFO - Epoch 18: train_loss: 13.73276885	 val_loss: 13.15509015
+root - INFO - Epoch 19: train_loss: 13.77277849	 val_loss: 12.96729832
+root - INFO - Epoch 20: train_loss: 13.73724848	 val_loss: 13.38957874
+root - INFO - Epoch 21: train_loss: 13.72461006	 val_loss: 12.87323951
+root - INFO - Epoch 22: train_loss: 12.53319179	 val_loss: 11.70582084
+root - INFO - Epoch 23: train_loss: 12.49171209	 val_loss: 11.73447228
+root - INFO - Epoch 24: train_loss: 12.48121714	 val_loss: 11.73230006
+root - INFO - Epoch 25: train_loss: 12.47137345	 val_loss: 11.75426177
+root - INFO - Epoch 26: train_loss: 12.46505373	 val_loss: 11.76676371
+root - INFO - Epoch 27: train_loss: 12.33154548	 val_loss: 11.72805898
+root - INFO - Epoch 28: train_loss: 12.32608575	 val_loss: 11.72566441
+root - INFO - Epoch 29: train_loss: 12.32354915	 val_loss: 11.72335270
+root - INFO - Epoch 30: train_loss: 12.32169202	 val_loss: 11.72857101

@@ -39,6 +39,10 @@ The autoencoder adapts to the normal data characteristics during training and th
 </p>
 
 <p align="center">
+  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/2caf3d74640907e09dd5f5f65ffc0fb826e4a432/images/loss_distributions_hist.png" alt="Texto alternativo">
+</p>
+
+<p align="center">
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/2caf3d74640907e09dd5f5f65ffc0fb826e4a432/images/loss_distributions.png" alt="Texto alternativo">
 </p>
 
@@ -46,7 +50,5 @@ The autoencoder adapts to the normal data characteristics during training and th
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/2caf3d74640907e09dd5f5f65ffc0fb826e4a432/images/combined_loss_distributions.png" alt="Texto alternativo">
 </p>
 
-<p align="center">
-  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/2caf3d74640907e09dd5f5f65ffc0fb826e4a432/images/anomaly_detect.png" alt="Texto alternativo">
-</p>
+
 

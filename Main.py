@@ -42,7 +42,7 @@ df = df.drop(columns=['id'])
 
 # numerical columns categorization and normalization
 cat_norm = Cat_Norm()
-cat_norm.Cat(df)  
+df = cat_norm.Cat(df)  
 df_encoded = cat_norm.Norm(df)  
 
 # correlation matrix
@@ -53,8 +53,9 @@ corr_mat.plot_correlation_selected_vars()
 
 # normal data (label = 0) vs anomalies (label != 0)
 df_normal = df_encoded[df_encoded['attack_cat'] == 6]
+df_normal_tensor = torch.as_tensor(df_normal.to_numpy(), dtype=torch.float)
 df_anomalies = df_encoded[df_encoded['attack_cat'] != 6]
-df_anomalies = torch.as_tensor(df_anomalies.to_numpy(), dtype=torch.float)
+df_anomalies_tensor = torch.as_tensor(df_anomalies.to_numpy(), dtype=torch.float)
 
 # train/test data split
 data_splitter = DataSplitter(df_normal, test_size = 0.3, random_state = 42)
@@ -64,13 +65,13 @@ X_train, X_test, Y_test = data_splitter.split_data()
 # parameters
 input_size = X_train.shape[1]
 output_size = X_train.shape[1]
-hidden_size1 = 28
-hidden_size2 = 15
+hidden_size1 = 12
+hidden_size2 = 7
 center_size = 4
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-n_epochs = 25
-batch_size = 16
-lr = 0.01
+n_epochs = 30
+batch_size = 12
+lr = 0.005
 
 # model train
 model = Autoencoder(input_size, output_size, hidden_size1, hidden_size2, center_size).to('cpu')
@@ -80,13 +81,12 @@ trainer.plot_loss_history(history)
 
 # prediction
 predictor = Predictor(model, device)
-prediction_train, losses_train = predictor.predict(batch_size, X_train)
-prediction_test, losses_test = predictor.predict(batch_size, X_test)
-prediction_anomalies, losses_anomalies = predictor.predict(batch_size, df_anomalies)
-predictor.plot_loss_distributions(losses_train, losses_test, losses_anomalies)
+prediction_normal, losses_normal = predictor.predict(df_normal_tensor)
+prediction_anomalies, losses_anomalies = predictor.predict(df_anomalies_tensor)
+predictor.plot_loss_distributions(losses_normal, losses_anomalies)
 
-# anomaly detection 
-detector = AnomalyDetector(threshold = 500)
-classifications = detector.detect_anomalies(losses_anomalies)
-visualizer = plot_anomaly(losses_train, losses_test, losses_anomalies)
-visualizer.plot_losses()
+# # anomaly detection 
+# detector = AnomalyDetector(threshold = 500)
+# classifications = detector.detect_anomalies(losses_anomalies)
+# visualizer = plot_anomaly(losses_train, losses_test, losses_anomalies)
+# visualizer.plot_losses()
