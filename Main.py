@@ -9,7 +9,6 @@ from classes.anomaly_detect import AnomalyDetector, plot_anomaly
 from classes.encoder import Encoder
 from classes.decoder import Decoder
 
-# hola
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
