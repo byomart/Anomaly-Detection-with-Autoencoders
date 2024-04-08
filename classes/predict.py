@@ -38,7 +38,6 @@ class Predictor:
         plt.close()
 
         plt.figure(figsize=(15, 5))
-        plt.subplot(1, 3, 1)
         sns.kdeplot(losses_train, color='b')
         sns.kdeplot(losses_test, color='r')
         sns.kdeplot(losses_anomalies, color='g')
