@@ -10,6 +10,12 @@ Our project involves developing anomaly detection algorithms capable of discerni
 
 ## Index
 
+### Exploratory Data Analysis (EDA) and Preprocessing
+The initial step involves exploring the dataset to gain insights into its structure and characteristics. The log file contains the results of this exploration, providing valuable information for further analysis. Additionally, categorical variable encoding and dataset normalization are performed to prepare the data for subsequent processing steps. Moreover, a correlation study is conducted to examine the relationships between different variables.
+
+As an illustration, the images below showcase both the distribution of variables using a pie chart and the correlation analysis based on the correlation matrix. These visualizations offer valuable insights into the dataset's composition and inter-variable relationships, aiding in the understanding of its underlying patterns and potential anomalies.
+
+- **Dataset Load**:
 <p align="center">
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/e899ee658cc16572d42ff9bea114d2b86c55a0e5/images/attack_pie_chart.png" alt="Texto alternativo">
 </p>
@@ -21,6 +27,10 @@ Our project involves developing anomaly detection algorithms capable of discerni
 <p align="center">
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/2caf3d74640907e09dd5f5f65ffc0fb826e4a432/images/attack_cat_correlation_matrix.png" alt="Texto alternativo">
 </p>
+
+
+
+
 
 
 <p align="center">
