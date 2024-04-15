@@ -44,7 +44,7 @@ After training the model, it is easy to interpret the difference between the per
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/f5985b17eb03a8a68a6790eb3bed18a04aa264ca/images/loss_distributions_hist.png" alt="Texto alternativo">
 </p>
 
-Going one step further, the distribution of each of the sets is plotted and a threshold is drawn to delimit the boundary between 'normal' and 'anomalous' data. In this way, we will be able to classify a new unknown sample according to its position with respect to this threshold.
+Going one step further, the kernel density of each of the sets is plotted and a threshold is drawn to delimit the boundary between 'normal' and 'anomalous' data. In this way, we will be able to classify a new unknown sample according to its position with respect to this threshold.
 
 <p align="center">
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/f5985b17eb03a8a68a6790eb3bed18a04aa264ca/images/loss_distributions.png" alt="Texto alternativo">
@@ -56,7 +56,7 @@ Going one step further, the distribution of each of the sets is plotted and a th
 
 Finally, the confusion matrix obtained from our model is shown, reaching an accuracy of 97.27%. The data are also collected in the log file (*root - INFO - Accuracy: 0.9722708060049555, True Positives: 45219, False Positives: 2170, True Negatives: 34830, False Negatives: 113*).
 <p align="center">
-  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/ed45b51e6fca491bf57fd76ac03d188764d8474d/images/confusion_matrix.png" alt="Texto alternativo" width="500">
+  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/ed45b51e6fca491bf57fd76ac03d188764d8474d/images/confusion_matrix.png" alt="Texto alternativo" width="600">
 </p>
 
 
