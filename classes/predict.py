@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from skimage import filters
+
 
 class Predictor:
     def __init__(self, model, device):
@@ -45,6 +47,5 @@ class Predictor:
         plt.figure(figsize=(15, 5))
         sns.kdeplot(losses_normal, color='b')
         sns.kdeplot(losses_anomalies, color='r')
-        #plt.axvline(x = 2, color='k', linestyle='--', label='Threshold')
         plt.savefig(os.path.join('images', 'combined_loss_distributions.png'))
         plt.close()

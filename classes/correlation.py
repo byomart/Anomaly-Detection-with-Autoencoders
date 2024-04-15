@@ -11,6 +11,7 @@ class CorrelationMatrix:
         sns.heatmap(self.df.corr())
         plt.title('Correlation Matrix')
         plt.savefig(os.path.join('images', 'correlation_heatmap.png')) 
+        # plt.show()
         plt.close()
 
     def remove_highly_correlated_variables(self, threshold=0.97):
