@@ -93,7 +93,7 @@ predictor.plot_loss_distributions(losses_normal, losses_anomalies)
 th_detector = AutomaticThresholdDetector()
 threshold = th_detector.detect_threshold(losses_normal, losses_anomalies)
 
-
+# Acc and confusion matrix
 confusion_matrix_calculator = ConfusionMatrixCalculator(threshold)
 accuracy,TP, FN, TN, FP = confusion_matrix_calculator.calculate_confusion_matrix(losses_normal, losses_anomalies)
 confusion_matrix_calculator.plot_confusion_matrix(TP, FN, TN, FP)
