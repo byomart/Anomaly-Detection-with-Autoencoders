@@ -75,12 +75,12 @@ n_epochs = 30
 batch_size = 12
 lr = 0.005
 
-# # model train
-# model = Autoencoder(input_size, output_size, hidden_size1, hidden_size2, center_size).to('cpu')
-# trainer = Trainer(model, X_train, X_test, n_epochs, batch_size, lr, device)
-# trained_model, history = trainer.train_model()
-# trainer.plot_loss_history(history)
-model = torch.load("model.pth")
+# model train
+model = Autoencoder(input_size, output_size, hidden_size1, hidden_size2, center_size).to('cpu')
+trainer = Trainer(model, X_train, X_test, n_epochs, batch_size, lr, device)
+trained_model, history = trainer.train_model()
+trainer.plot_loss_history(history)
+# model = torch.load("model.pth") 
 
 
 # prediction
@@ -98,45 +98,3 @@ confusion_matrix_calculator = ConfusionMatrixCalculator(threshold)
 accuracy,TP, FN, TN, FP = confusion_matrix_calculator.calculate_confusion_matrix(losses_normal, losses_anomalies)
 confusion_matrix_calculator.plot_confusion_matrix(TP, FN, TN, FP)
 logging.info(f'Accuracy: {accuracy}, True Positives: {TP}, False Positives: {FP}, True Negatives: {TN}, False Negatives: {FN} ')
-
-
-'''
-all_attack = np.array(losses_anomalies)
-TP = all_attack[(all_attack > threshold)]
-FN = all_attack[(all_attack <= threshold)]
-
-all_normal = np.array(losses_normal)
-FP = all_normal[(all_normal > threshold)]
-TN = all_normal[(all_normal <= threshold)]
-
-print(f'True Positives: {len(TP)}')
-print(f'False Negatives: {len(FN)}')
-print(f'True Positive Rate / Sensitivity: {len(TP)/(len(TP)+len(FN))}')
-print('\n')
-print(f'True Negatives: {len(TN)}')
-print(f'False Positives: {len(FP)}')
-print(f'True Negative Rate / Specificity: {len(TN)/(len(TN)+len(FP))}')
-print('\n')
-
-
-anomaly_tag={
-    'Analysis': 0,
-    'Backdoor': 1,
-    'DoS': 2,
-    'Exploits': 3,
-    'Fuzzers': 4,
-    'Generic': 5,
-    'Reconnaissance': 7,
-    'Shellcode': 8,
-    'Worms': 9
-             }
-
-
-g_data=analyzer.print_data_distribution(losses_normal, losses_anomalies, "Ditrubución global de los datos")
-
-thrs_in_anomaly={}
-thrs_in_anomaly['General']=g_data
-
-
-attack_analyzer = AttackDistributionAnalyzer(model,device)
-thrs_in_anomaly = attack_analyzer.analyze_and_update(thrs_in_anomaly, df_anomalies, anomaly_tag, losses_normal)'''
