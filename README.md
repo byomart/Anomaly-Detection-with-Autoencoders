@@ -51,7 +51,7 @@ The autoencoder adapts to the normal data characteristics during training and th
 </p>
 
 <p align="center">
-  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/98ebf3da6fe4976d555ce39b01958d84cf95135b/images/th.png" alt="Texto alternativo">
+  <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/852e658abaee2236752346afc94fd1d6e3800b82/images/th.png" alt="Texto alternativo">
 </p>
 
 <p align="center">
