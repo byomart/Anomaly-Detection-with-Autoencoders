@@ -54,7 +54,7 @@ Going one step further, the distribution of each of the sets is plotted and a th
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/852e658abaee2236752346afc94fd1d6e3800b82/images/th.png" alt="Texto alternativo" width="600">
 </p>
 
-Para terminar, se muestra la matriz de confusión obtenida a partir de nuestro modelo, alcanzando una precisión del 97,27%. Los datos estan recogidos en el fichero de logs (*root - INFO - Accuracy: 0.9722708060049555, True Positives: 45219, False Positives: 2170, True Negatives: 34830, False Negatives: 113*).
+Finally, the confusion matrix obtained from our model is shown, reaching an accuracy of 97.27%. The data are also collected in the log file (*root - INFO - Accuracy: 0.9722708060049555, True Positives: 45219, False Positives: 2170, True Negatives: 34830, False Negatives: 113*).
 <p align="center">
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/ed45b51e6fca491bf57fd76ac03d188764d8474d/images/confusion_matrix.png" alt="Texto alternativo" width="500">
 </p>
