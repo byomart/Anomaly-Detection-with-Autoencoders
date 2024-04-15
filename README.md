@@ -38,7 +38,7 @@ The autoencoder adapts to the normal data characteristics during training and th
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/f5985b17eb03a8a68a6790eb3bed18a04aa264ca/images/loss.png" alt="Texto alternativo">
 </p>
 
-Once we have trained the model, it is easy to interpret the difference between the performance of the model for normal and anomalous data. In this case, it is illustrated in the following figure that shows the histograms of both data sets, easily observing how they are distributed in different ranges of values.
+After training the model, it is easy to interpret the difference between the performance of the model for normal and anomalous data. In this case, it is illustrated in the following figure that shows the histograms of both data sets, easily observing how they are distributed in different ranges of values.
 
 <p align="center">
   <img src="https://github.com/fbayomartinez/Anomaly-Detection-with-Autoencoders/blob/f5985b17eb03a8a68a6790eb3bed18a04aa264ca/images/loss_distributions_hist.png" alt="Texto alternativo">
